@@ -5,14 +5,37 @@ body {
 }
 
 .grid-container {
+  display:grid;
+  grid-template:  auto / 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
   height: 100vh;
   width: 100vw;
   /* your properties here */
 }
 
 .grid-item {
+
   background-color: grey;
   border: 1px solid black;
 }
 
 /* add the .bigItem class */
+.bigItem {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-area: 2 / 2 / 4 / 4;
+height: 50%;
+width: 50%;
+justify-self: center;
+align-self: center
+}
+
+/*.bigItem {
+  grid-row: 2 / 4;
+  grid-column: 2 / 4;
+  grid-area: <grid-row-start> / <grid-column-start> / <grid-row-end> / <grid-column-end>
+}*/
+
+/*grid-area: footer-start / 1 / footer-end / 4*/
